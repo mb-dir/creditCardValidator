@@ -23,6 +23,36 @@ class CheckCard{
             return false;
         }
     }
+    validLuhn(){
+        const cardNumberString = this.cardNumber.toString();
+        let firstStepValidValue = 0;
+
+        for (let i = cardNumberString.length - 2; i >= 0; i=i-2) {
+            const number = parseInt(cardNumberString[i])
+            if((number * 2) >=10){
+                //the biggest digit is 19 => 1 and 9
+                const [firstDigit, secondDigit] = (number * 2).toString();
+                firstStepValidValue += parseInt(firstDigit);
+                firstStepValidValue += parseInt(secondDigit);
+            }else{
+                firstStepValidValue += (number*2);
+            }
+        }
+
+        let secondStepValidValue = 0;
+
+        for (let i = cardNumberString.length - 1; i >= 0; i = i - 2) {
+            const number = parseInt(cardNumberString[i])
+            secondStepValidValue += number; 
+        }
+        const finalValue = firstStepValidValue + secondStepValidValue;
+        
+        if(finalValue % 10 === 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 export default CheckCard;
