@@ -1,3 +1,4 @@
+import validCard from './checkCard.js'
 const formDataCard = document.querySelector('#cardData');
 
 formDataCard.addEventListener('submit', (e)=>{
