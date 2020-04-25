@@ -5,6 +5,13 @@ class CheckCard{
         this.firstNumber = parseInt(cardNumber.toString().slice(0, 1));
         this.firstTwoNumbers = parseInt(cardNumber.toString().slice(0, 2));
     }
+    checkCardNumber(){
+        if (this.validLength() && this.validLuhn()) {
+            return this.whichCard();
+        }else{
+            return "Nieprawidłowy"
+        }
+    }
     validLength(){
         if (this.cardNumberLength === 13 || this.cardNumberLength === 15 || this.cardNumberLength === 16) {
             return true;
