@@ -9,4 +9,6 @@ formDataCard.addEventListener('submit', (e)=>{
 
     const validator = new validCard(cardNumber);
     const resultValidation = validator.checkCardNumber();
+
+    informationPlace.innerHTML = resultValidation;
 });
