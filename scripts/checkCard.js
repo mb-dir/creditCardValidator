@@ -20,7 +20,7 @@ class CheckCard{
         } else if (this.firstTwoNumbers === 34 || this.firstTwoNumbers === 37) {
             return "American Express"
         }else{
-            return false;
+            return "Nieprawidłowy";
         }
     }
     validLuhn(){
