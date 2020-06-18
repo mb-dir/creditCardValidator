@@ -5,3 +5,31 @@ body{
     background-color: #111;
     color: #fb7373;
 }
+.cardDataForm{
+    width: 40%;
+    height: 150px;
+    border: 3px solid #fb7373;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardNumberInput{
+    width: 40%;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: #111;
+    color: #efefef;
+    border: none;
+    border: 1px solid #fb7373;
+    border-radius: 5px;
+}
+.btn{
+    background-color: #111;
+    color: #efefef;
+    padding: 3px 7px;
+    border: none;
+    border: 1px solid #fb7373;
+    border-radius: 5px;
+}
