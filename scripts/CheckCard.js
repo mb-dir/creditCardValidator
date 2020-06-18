@@ -9,7 +9,7 @@ class CheckCard{
         if (this.validLength() && this.validLuhn()) {
             return this.whichCard();
         }else{
-            return "Nieprawidłowy"
+            return "Nieprawidłowy";
         }
     }
     validLength(){
@@ -21,11 +21,11 @@ class CheckCard{
     }
     whichCard(){
         if (this.firstNumber === 4) {
-            return "Visa"
+            return "Visa";
         } else if (this.firstTwoNumbers >= 51 && this.firstTwoNumbers <= 55) {
-            return "Mastercard"
+            return "Mastercard";
         } else if (this.firstTwoNumbers === 34 || this.firstTwoNumbers === 37) {
-            return "American Express"
+            return "American Express";
         }else{
             return "Nieprawidłowy";
         }
@@ -35,7 +35,7 @@ class CheckCard{
         let firstStepValidValue = 0;
 
         for (let i = cardNumberString.length - 2; i >= 0; i=i-2) {
-            const number = parseInt(cardNumberString[i])
+            const number = parseInt(cardNumberString[i]);
             if((number * 2) >=10){
                 //the biggest digit is 19 => 1 and 9
                 const [firstDigit, secondDigit] = (number * 2).toString();
@@ -49,7 +49,7 @@ class CheckCard{
         let secondStepValidValue = 0;
 
         for (let i = cardNumberString.length - 1; i >= 0; i = i - 2) {
-            const number = parseInt(cardNumberString[i])
+            const number = parseInt(cardNumberString[i]);
             secondStepValidValue += number; 
         }
         const finalValue = firstStepValidValue + secondStepValidValue;
